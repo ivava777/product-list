@@ -1,0 +1,17 @@
+<div class="pagination-wrapper">
+  <div class="pages">
+    <button (click)="onPreviousPage()" [disabled]="pageNum <= 1" class="pages-btn pages-btn-previous">&#8249;</button>
+    <div class="page-num">
+      {{ pageNum }}
+    </div>
+    <button (click)="onNextPage()" [disabled]="!(nextPageAvailable$ | async)" class="pages-btn pages-btn-next">
+      &#8250;
+    </button>
+  </div>
+  <div class="pages-size">
+    <label for="pageSize">pageSize:</label>
+    <select [(ngModel)]="pageSize" (change)="onChangePageSize()" id="pageSize">
+      <option *ngFor="let item of pageSizesArray">{{ item }}</option>
+    </select>
+  </div>
+</div>

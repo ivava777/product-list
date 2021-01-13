@@ -1,0 +1,6 @@
+<header class="header">
+  <label for="userRole">Select your role:</label>
+  <select [(ngModel)]="userRole" (change)="onChangeRole()" id="userRole">
+    <option *ngFor="let i of userRoleArray">{{ i }}</option>
+  </select>
+</header>

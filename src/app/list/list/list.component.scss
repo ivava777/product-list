@@ -1,0 +1,25 @@
+.data-table{
+    width: 100%;
+    margin: 20px auto;
+    cursor: pointer;
+    border: 1px solid black;
+    border-collapse: collapse;
+    .text-a-center{
+        text-align: center;
+    }    
+    th{
+        text-align: left;
+        border: 1px solid black;
+    }
+    td{
+        padding: 10px 5px 10px;
+        border: 1px solid black;
+    }    
+    tr{
+        background-color: #b8d1f3;
+    }
+    .data-table-rows:hover{
+            background-color: #ffff99;
+    }
+}
+

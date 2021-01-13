@@ -1,0 +1,21 @@
+<h1>Product list:</h1>
+<button class="btn btn-success" (click)="onNewProduct()">New Product</button>
+<app-spinner [show]="loading$ | async"></app-spinner>
+<div *ngIf="error$ | async as error">
+  <div class="error">{{ error }}</div>
+</div>
+<table class="data-table">
+  <tr>
+    <th class="text-a-center">##</th>
+    <th class="text-a-center">Name</th>
+    <th class="text-a-center">Price</th>
+  </tr>
+  <tr *ngFor="let product of products$ | async; let i = index" class="data-table-rows" (click)="onEditProduct(product)">
+    <td class="text-a-center">{{ pageSize * (pageNum - 1) + i + 1 }}</td>
+    <td>{{ product.name }}</td>
+    <td class="text-a-center">{{ product.price }}</td>
+  </tr>
+</table>
+<div>
+  <app-list-pagination [pageNum]="pageNum" [pageSize]="pageSize"></app-list-pagination>
+</div>

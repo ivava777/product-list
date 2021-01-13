@@ -1,0 +1,56 @@
+.product-form{
+    max-width: 500px;
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin: 20px auto;
+}
+
+.form-group-btns {
+    display: flex;
+    justify-content: flex-end;
+    *:not(:last-child) {
+        margin-right: 1rem;
+    }
+}
+
+.alert {
+    margin: 20px auto;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.alert-danger, .error{
+    color: red;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;     
+    background: #0069eb;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    font-size: 12px;
+    padding: 10px 20px;
+    text-decoration: none;
+    &-default{
+        background: #57ff03;
+    }
+    &:disabled{
+        border: 1px solid #999999;
+        background-color: #cccccc;
+        color: #666666;        
+    }
+}
+
+input.ng-touched.ng-invalid {
+    border: solid red 2px;
+}
+input.ng-touched.ng-valid {
+    border: solid green 2px;
+}
+
